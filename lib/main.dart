@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_animated_tooltip/animated_tooltip.dart';
+import 'package:custom_tooltip/custom_tooltip.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+const tooltipBackgroundColor = Color(0xff333333);
+const tooltipContentTextColor = Colors.white;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,23 +32,35 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: AnimatedTooltip(
-                      content: Text('This is an inverted tooltip.'),
+                    child: CustomTooltip(
+                      backgroundColor: tooltipBackgroundColor,
+                      content: Text(
+                        'This is an inverted tooltip. awewefjwaoeifjewiafuhjweifewuhafweoiaufhweaifuhvoiahuveaiovuhavpijapvijwavwopaijvwapovijawopvij',
+                        style: TextStyle(color: tooltipContentTextColor),
+                      ),
                       child: Icon(Icons.info),
                     ),
                   ),
                   Expanded(
                     child: Center(
-                      child: AnimatedTooltip(
-                        content: Text('This is a centered tooltip.'),
+                      child: CustomTooltip(
+                        backgroundColor: tooltipBackgroundColor,
+                        content: Text(
+                          'Please enter alphanumeric characters (A-Z, 0-9)',
+                          style: TextStyle(color: tooltipContentTextColor),
+                        ),
                         child: Icon(Icons.info),
                       ),
                     ),
                   ),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: AnimatedTooltip(
-                      content: Text('This is a right-aligned tooltip.'),
+                    child: CustomTooltip(
+                      backgroundColor: tooltipBackgroundColor,
+                      content: Text(
+                        'This is a right-aligned tooltip. awewefjwaoeifjewiafuhjweifewuhafweoiaufhweaifuhvoiahuveaiovuhavpijapvijwavwopaijvwapovijawopvij',
+                        style: TextStyle(color: tooltipContentTextColor),
+                      ),
                       child: Icon(Icons.info),
                     ),
                   ),

@@ -1,6 +1,6 @@
 {
-    "name": "flutter_animated_tooltip",
-    "short_name": "flutter_animated_tooltip",
+    "name": "Custom Tooltip",
+    "short_name": "Custom Tooltip",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
